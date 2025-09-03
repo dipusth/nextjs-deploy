@@ -1,14 +1,5 @@
 
-  
-.container {
-  margin: 0 auto;
-  padding-left: .9375rem;
-  padding-right: .9375rem;
 
-  @media (min-width: 768px) {
-    max-width: 1246px !important;
-  }
-}
   /* Dropdown Menu */
   .dropdown {
     &:hover {

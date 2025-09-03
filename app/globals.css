@@ -112,11 +112,37 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+@theme  {
+  --color-primary: #0285ab; 
+  --color-primary-100: #71dfff; 
+  --color-primary-400: #29bae4; 
+  --color-secondary: #0D9488; 
+  --color-secondary-50: #F9EBEC; 
+  --color-secondary-500: #C33241; 
+  --color-black: #565656; 
+  --color-black-800: #2B2B2B;
+  --color-gradient1: #39cdf8;
+  --color-gradient2: #027ea2;
+  --color-white: #fff;
+  --color-border: #d8d6d6;
+  --font-nohemi:'Nohemi', 'sans-serif'; 
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding-left: .9375rem;
+  padding-right: .9375rem;
+
+  @media (min-width: 768px) {
+    max-width: 1246px !important;
   }
 }

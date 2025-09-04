@@ -6,7 +6,7 @@ const SearchBar = () => {
     console.log("searching.. handleSearch");
   };
   return (
-    <div className="flex items-center max-w-3xs border px-3 rounded-sm search-wrapper">
+    <div className="flex items-center max-w-3xs min-w-[400px] border px-3 rounded-sm search-wrapper">
       <Search />
       <Input
         type="text"

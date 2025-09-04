@@ -30,20 +30,16 @@ const LoginPage = () => {
     password: "",
   });
   const onSubmit: SubmitHandler<LoginType> = (data) => {
-    console.log("Submitted data:", data);
-    // send to API or further process
     if (data.username == "" || data.password == "") {
       alert("Please fill up the form");
       return;
     }
 
     const user = getUser(data.username, data.password);
-    console.log("user", user);
     if (user == null) {
       alert("Username or password is not correct");
       return;
     }
-    console.log("user", user);
     updateActiveUser(user);
     redirect("/");
   };
@@ -57,27 +53,7 @@ const LoginPage = () => {
     const id = event.target.id;
     const value = event.target.value;
     setData({ ...data, [id]: value });
-    console.log("handleInputChannge", event);
-    console.log("handleInputChannge value", value);
-    console.log("data value", data);
   };
-  // const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-  //   event.preventDefault();
-  //   if (data.username == "" || data.password == "") {
-  //     alert("Please fill up the form");
-  //     return;
-  //   }
-
-  //   const user = getUser(data.username, data.password);
-  //   console.log("user", user);
-  //   if (user == null) {
-  //     alert("Username or password is not correct");
-  //     return;
-  //   }
-  //   console.log("user", user);
-  //   updateActiveUser(user);
-  //   navigate("/dashboard");
-  // };
   return (
     <LoginWapper className="bg-wrapper bg-props bg-primary-400  h-full overflow-hidden ">
       <div className="flex items-center h-full">
@@ -188,7 +164,7 @@ const LoginPage = () => {
               </form>
             </CardContent>
           </Card>
-          <div className="mt-1 text-white text-muted-foreground *:[a]:hover:text-primary text-center text-xs text-balance *:[a]:underline *:[a]:underline-offset-4">
+          <div className="mt-1 text-white *:[a]:hover:text-primary text-center text-xs text-balance *:[a]:underline *:[a]:underline-offset-4">
             By clicking continue, you agree to our{" "}
             <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
           </div>

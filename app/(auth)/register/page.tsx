@@ -46,7 +46,6 @@ const RegisterPage = () => {
     };
   }, []);
   const [message, setMessage] = useState<React.ReactNode>("");
-  console.log("message", message);
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const id = event.target.id;
     const value = event.target.value;
@@ -91,8 +90,6 @@ const RegisterPage = () => {
       username: "",
       password: "",
     });
-
-    // Save the user in local storage
   };
   return (
     <LoginWapper className="bg-wrapper bg-props bg-primary-400  h-full overflow-hidden ">

@@ -45,7 +45,7 @@ const LoginPage = () => {
     }
     console.log("user", user);
     updateActiveUser(user);
-    redirect("/dashboard");
+    redirect("/");
   };
   useEffect(() => {
     document.body.style.overflow = "hidden";

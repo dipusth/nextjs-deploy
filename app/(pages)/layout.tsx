@@ -1,16 +1,19 @@
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
-import { CartProvider } from "@/context/CartContext";
+"use client";
+
 import React from "react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
-const layout = ({ children }: { children: React.ReactElement }) => {
+export default function PagesLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <CartProvider>
+    <>
       <Navbar />
-      <main>{children}</main>
+      <main className="pages-layout">{children}</main>
       <Footer />
-    </CartProvider>
+    </>
   );
-};
-
-export default layout;
+}

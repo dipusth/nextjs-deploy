@@ -160,7 +160,7 @@ const LoginPage = () => {
                         type="password"
                         placeholder="Enter your password"
                         {...register("password", {
-                          onchange: handleInputChannge,
+                          onChange: handleInputChannge,
                           required: "Password is required",
                           minLength: {
                             value: 6,

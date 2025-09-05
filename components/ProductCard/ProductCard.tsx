@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useCart } from "@/context/CartContext";
 
 import { Card, CardFooter, CardHeader, CardTitle } from "../ui/card";
+import styles from "./ProductCard.module.css";
 
 import {
   Tooltip,
@@ -38,7 +39,6 @@ export const ProductCard = ({ product, cardHeight }: Props) => {
       newCart.push(product);
     }
     setCart(newCart);
-    console.log("Added to cart newCart:", newCart);
   };
 
   return (
@@ -57,7 +57,9 @@ export const ProductCard = ({ product, cardHeight }: Props) => {
               style={{ objectFit: "cover" }}
             />
             <div className="absolute bottom-0 w-full hover-content text-center justify-center flex">
-              <div className="border rounded-sm flex max-w-[50%] bg-white text-gray-400 opacity-[0.8]">
+              <div
+                className={`border rounded-sm flex max-w-[50%] bg-white text-gray-400 opacity-[0.8] ${styles.tooltip} `}
+              >
                 <TooltipProvider>
                   <Tooltip>
                     <TooltipTrigger asChild>

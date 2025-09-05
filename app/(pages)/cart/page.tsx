@@ -12,7 +12,7 @@ const Cart = () => {
   const hasCart = cart.length;
   return (
     <div className="container">
-      <div className="flex gap-8">
+      <div className="flex gap-8 my-10">
         <div className="p-5 border rounded-lg flex-2">
           {!hasCart && (
             <div className="flex">
@@ -23,7 +23,7 @@ const Cart = () => {
 
           {cart.map((item, key) => {
             return (
-              <CartWrapper className="flex p-5 " key={key}>
+              <CartWrapper className="p-5 " key={key}>
                 <ProductDetail product={item} cardHeight="h-50" />
               </CartWrapper>
             );

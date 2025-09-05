@@ -1,0 +1,7 @@
+/* Tooltip */
+.tooltip{
+  svg{
+    fill: #565656;
+    background-color: #565656;
+  }
+}

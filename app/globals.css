@@ -125,7 +125,6 @@
   --color-gradient2: #027ea2;
   --color-white: #fff;
   --color-border: #d8d6d6;
-  --font-nohemi:'Nohemi', 'sans-serif'; 
 }
 
 @layer base {
@@ -137,12 +136,21 @@
   }
 }
 
+html {
+  font-size: 16px; /* Prevents scaling */
+}
+body {
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
 .container {
   margin: 0 auto;
   padding-left: .9375rem;
   padding-right: .9375rem;
-
   @media (min-width: 768px) {
     max-width: 1246px !important;
   }
 }
+

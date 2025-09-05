@@ -36,7 +36,6 @@ export const ProductCard = ({ product, cardHeight }: Props) => {
       newCart.push(product);
     }
     setCart(newCart);
-    console.log("Added to cart newCart:", newCart);
   };
 
   return (

@@ -12,7 +12,9 @@ const ProductDetail = ({ product, cardHeight }: Props) => {
   const finalPrice = (price?.unit_amount ?? 0) / 100;
   return (
     <div className="flex py-5">
-      <div className={`border cart-img ${cardHeight} relative flex-1`}>
+      <div
+        className={`border cart-img ${cardHeight} relative flex-1 rounded-sm overflow-hidden`}
+      >
         <Image
           className="opacity-[0.9] h-20"
           src={product.images[0]}

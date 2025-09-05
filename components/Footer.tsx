@@ -1,8 +1,9 @@
 import { ShoppingCart } from "lucide-react";
+import { FooterWrapper } from "./Styles";
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <FooterWrapper className="footer">
       <div className="container">
         <div className="lg:flex justify-between md:py-11 pb-13">
           <div className="footer-info flex flex-col gap-4 lg:gap-8">
@@ -116,7 +117,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-    </footer>
+    </FooterWrapper>
   );
 };
 

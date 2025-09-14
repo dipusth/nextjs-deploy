@@ -62,7 +62,7 @@ export default async function Home() {
                   <span className="text-primary">60%</span> off
                 </span>
               </div>
-              <h1 className="text- title font-nohemi capitalize flex align-center pb-3">
+              <h1 className="text-3xl title font-nohemi capitalize flex align-center pb-3">
                 Just
                 <span className="font-black slider ml-3">
                   <span className="slide1 text-orange-400">Click Away</span>

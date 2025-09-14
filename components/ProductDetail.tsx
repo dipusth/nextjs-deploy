@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Stripe from "stripe";
+import { Button } from "./ui/button";
 
 interface Props {
   product: Stripe.Product;
@@ -26,13 +27,28 @@ const ProductDetail = ({ product, cardHeight }: Props) => {
       </div>
       <div className="ml-15 flex-2">
         <h4 className="font-bold text-2xl">{product.name}</h4>
-        {/* <span>{product}</span> */}
         <p>{product.description}</p>
         {price && price.unit_amount && (
           <p>
             <span className="font-bold">${finalPrice}</span>
           </p>
         )}
+
+        <div className="my-2">
+          <Button
+            variant={"outline"}
+            className="p-3 rounded-none active:bg-primary active:text-white hover:bg-primary hover:text-white"
+          >
+            -
+          </Button>
+          <span className="mx-3">0</span>
+          <Button
+            variant={"outline"}
+            className="p-3 rounded-none active:bg-primary active:text-white hover:bg-primary hover:text-white"
+          >
+            +
+          </Button>
+        </div>
       </div>
     </div>
   );

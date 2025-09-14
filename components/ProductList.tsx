@@ -1,10 +1,10 @@
 "use client";
 
 import Stripe from "stripe";
-import { ProductCard } from "./ProductCard";
 import { Input } from "./ui/input";
 import { Search } from "lucide-react";
 import { useState } from "react";
+import { ProductCard } from "./ProductCard/ProductCard";
 interface Props {
   products: Stripe.Product[];
 }

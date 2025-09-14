@@ -5,7 +5,6 @@ import { Card, CardFooter, CardHeader, CardTitle } from "./ui/card";
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { Eye, Heart, ShoppingCart } from "lucide-react";
-import { CardProduct } from "./ui/Styles";
 import {
   Tooltip,
   TooltipContent,
@@ -13,6 +12,7 @@ import {
   TooltipTrigger,
 } from "./ui/tooltip";
 import { useCart } from "@/context/CartContext";
+import { CardProduct } from "./Styles";
 
 interface Props {
   product: Stripe.Product;
@@ -24,6 +24,7 @@ export const ProductCard = ({ product, cardHeight }: Props) => {
   // const [selectedProducts, setSelectedProducts] = useState<Stripe.Product[]>(
   //   []
   // );
+  console.log("product on product card", product);
   const price = product.default_price as Stripe.Price;
   const finalPrice = (price?.unit_amount ?? 0) / 100;
   // const oldprice = Number(finalPrice) - Number(finalPrice) * 0.2;

@@ -15,7 +15,7 @@ import {
   TooltipTrigger,
 } from "../ui/tooltip";
 import { Button } from "../ui/button";
-import { CardProduct } from "../ui/Styles";
+import { CardProduct } from "../Styles";
 
 interface Props {
   product: Stripe.Product;
@@ -27,6 +27,7 @@ export const ProductCard = ({ product, cardHeight }: Props) => {
   // const [selectedProducts, setSelectedProducts] = useState<Stripe.Product[]>(
   //   []
   // );
+  console.log("product on product card", product);
   const price = product.default_price as Stripe.Price;
   const finalPrice = (price?.unit_amount ?? 0) / 100;
   // const oldprice = Number(finalPrice) - Number(finalPrice) * 0.2;
@@ -46,7 +47,7 @@ export const ProductCard = ({ product, cardHeight }: Props) => {
       <Link href={`/products/${product.id}`}>
         {product.images && product.images[0] && (
           <CardProduct
-            className={`${cardHeight} card-product w-full relative border overflow-hidden rounded-sm bg-slate-300`}
+            className={`${cardHeight} card-product w-full relative border border-slate-200 overflow-hidden rounded-sm bg-slate-300`}
           >
             <Image
               className="opacity-[0.9]"
@@ -57,9 +58,7 @@ export const ProductCard = ({ product, cardHeight }: Props) => {
               style={{ objectFit: "cover" }}
             />
             <div className="absolute bottom-0 w-full hover-content text-center justify-center flex">
-              <div
-                className={`border rounded-sm flex max-w-[50%] bg-white text-gray-400 opacity-[0.8] ${styles.tooltip} `}
-              >
+              <div className="border rounded-sm flex max-w-[50%] bg-white text-gray-400 opacity-[0.8]">
                 <TooltipProvider>
                   <Tooltip>
                     <TooltipTrigger asChild>

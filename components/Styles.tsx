@@ -87,3 +87,23 @@ export const FooterWrapper = styled.footer`
     }
   }
 `;
+
+export const CardProduct = styled.div`
+  .tooltip {
+    svg {
+      fill: #565656 !important;
+      background-color: #565656 !important;
+    }
+  }
+  .hover-content {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.3s linear;
+  }
+  &:hover {
+    .hover-content {
+      opacity: 1;
+      transform: translateY(-20px);
+    }
+  }
+`;

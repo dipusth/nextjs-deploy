@@ -1,7 +1,22 @@
 /* Tooltip */
 .tooltip{
   svg{
-    fill: #565656;
-    background-color: #565656;
+    fill: #565656 !important;
+    background-color: #565656 !important;
   }
 }
+
+
+
+  .hoverContent {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.3s linear;
+    &:hover {
+      .hover-content {
+        opacity: 1;
+        transform: translateY(-20px);
+      }
+    }
+  }
+  

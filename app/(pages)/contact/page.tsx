@@ -28,7 +28,7 @@ const formSchema = z.object({
   name: z
     .string()
     .min(2, { message: "Product name must be at least 2 characters" }),
-  email: z.string().min(1, { message: "Please select a product type" }),
+  type: z.string().min(1, { message: "Please select a product type" }),
   price: z.number().min(0.01, "Price must be greater than 0"),
 });
 
@@ -39,7 +39,7 @@ const ProductForm = () => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
-      email: "", // must match the schema type (string)
+      type: "", // must match the schema type (string)
       price: 0, // coerce.number so number is okay
     },
   });

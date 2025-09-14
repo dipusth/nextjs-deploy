@@ -3,10 +3,10 @@ import { FooterWrapper } from "./Styles";
 
 const Footer = () => {
   return (
-    <FooterWrapper className="footer">
+    <FooterWrapper className="footer bg-primary-dark">
       <div className="container">
         <div className="lg:flex justify-between md:py-11 pb-13">
-          <div className="footer-info flex flex-col gap-4 lg:gap-8">
+          <div className=" flex flex-col gap-4 lg:gap-8 flex-1 mr-32">
             <span className="font-bold text-4xl flex items-center">
               <ShoppingCart size={40} className="text-white mr-3" />
               Online <small className="text-sm block">Shopping</small>
@@ -18,7 +18,7 @@ const Footer = () => {
               aperiam accusantium.{" "}
             </p>
           </div>
-          <div className="quick-links flex justify-between">
+          <div className="quick-links flex justify-between flex-3 flex-grow-2">
             <div>
               <h5 className="text-6 font-bold pb-5">Get to know us</h5>
               <ul>

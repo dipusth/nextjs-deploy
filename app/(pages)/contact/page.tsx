@@ -28,7 +28,7 @@ const formSchema = z.object({
   name: z
     .string()
     .min(2, { message: "Product name must be at least 2 characters" }),
-  type: z.string().min(1, { message: "Please select a product type" }),
+  email: z.string().min(1, { message: "Please select a product type" }),
   price: z.number().min(0.01, "Price must be greater than 0"),
 });
 
@@ -39,7 +39,7 @@ const ProductForm = () => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
-      type: "", // must match the schema type (string)
+      email: "", // must match the schema type (string)
       price: 0, // coerce.number so number is okay
     },
   });
@@ -60,7 +60,7 @@ const ProductForm = () => {
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Product Name</FormLabel>
+                    <FormLabel>Full Name</FormLabel>
                     <FormControl>
                       <Input placeholder="Enter product name" {...field} />
                     </FormControl>

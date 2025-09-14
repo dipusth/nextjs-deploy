@@ -5,7 +5,7 @@ export const FooterWrapper = styled.footer`
   padding: 3.375rem 1.25rem 2.125rem;
   color: white;
 
-  background-color: var(--color-slate-600);
+  // background-color: var(--color-slate-600);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 160%;
@@ -52,7 +52,7 @@ export const FooterWrapper = styled.footer`
   }
 
   .quick-links {
-    flex-grow: 1;
+    // flex-grow: 1;
 
     @media (max-width: 1024px) {
       margin-top: 1.875rem;

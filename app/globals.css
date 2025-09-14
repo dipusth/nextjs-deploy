@@ -114,6 +114,7 @@
 
 @theme  {
   --color-primary: #0285ab; 
+  --color-primary-dark: #026b87; 
   --color-primary-100: #71dfff; 
   --color-primary-400: #29bae4; 
   --color-secondary: #0D9488; 

@@ -3,7 +3,7 @@ import { FooterWrapper } from "./Styles";
 
 const Footer = () => {
   return (
-    <FooterWrapper className="footer bg-primary-dark">
+    <FooterWrapper className="footer bg-primary-dark text-white">
       <div className="container">
         <div className="lg:flex justify-between md:py-11 pb-13">
           <div className=" flex flex-col gap-4 lg:gap-8 flex-1 mr-32">
